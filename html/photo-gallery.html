@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Skin & Body Care</title>
+    <title>Photo Gallery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='../css/photo-gallery.css'>    
   </head>
   <body>
     <header class="container-fluid">
@@ -24,7 +26,31 @@
       </div>
     </header>
     <main class="container">
-
+      <div id="photo-gallery" class="row">
+        <h1>Photo Gallery</h1>
+        <div class="col-xs-12">
+          <div class="gallery">            
+            <div class="gallery-images fade">
+              <img src="../images/gallery/gallery-pic-1.jpg">
+            </div>
+            <div class="gallery-images fade">
+              <img src="../images/gallery/gallery-pic-2.jpg">
+            </div>
+            <div class="gallery-images fade">
+              <img src="../images/gallery/gallery-pic-3.jpg">
+            </div>
+            <div class="gallery-images fade">
+              <img src="../images/gallery/gallery-pic-4.jpg">
+            </div>
+            <div class="gallery-images fade">
+              <img src="../images/gallery/gallery-pic-5.jpg">
+            </div>    
+            <button class="btn scroll" id="scroll-right">&#10095</button>
+            <button class="btn scroll" id="scroll-left">&#10094</button>
+          </div>
+          <script src='../js/photo-gallery.js'></script>
+        </div>
+      </div>
     </main>
     <footer class="container-fluid">
       <div class="container">
