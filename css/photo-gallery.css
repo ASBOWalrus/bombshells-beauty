@@ -5,7 +5,13 @@
 
 .gallery-images {
 	display: inline;
-	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.gallery-images img {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #scroll-left, #scroll-right {

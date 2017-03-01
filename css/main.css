@@ -1,1 +1,50 @@
-﻿
+﻿* {
+	font-family: 'Gudea', sans-serif;
+}
+
+header {
+	background-color: #c4ad92;
+	font-family: 'Gudea', sans-serif;
+	padding: 10px 0;
+}
+
+header .row {
+	display: flex;
+	align-items: center;
+}
+
+header nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#logo {
+	width: 95px;
+}
+
+.nav-btn, .dropdown-btn {
+	color: black;
+	margin: 0;
+	padding: 10px 20px;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+	text-decoration: none;
+	color: black;
+}
+
+.dropdown-btn:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.btn-group.open {
+	background-color: black;
+	opacity: .8;
+}
+
+#toggle-on, #toggle-on:hover {
+	color: #c4ad92;
+}
