@@ -27,8 +27,6 @@ $(document).ready(function () {
   document.addEventListener("click", function (e) {
     if(!$(e.target).is(".btn-group"))
     {
-      console.log("Test");
-
       if(toggle === true)
       {
         $("#toggle-on").attr("id", "");
