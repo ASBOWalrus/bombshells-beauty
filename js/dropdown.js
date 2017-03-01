@@ -13,9 +13,22 @@ $(document).ready(function () {
     }
   });
 
-  $(document).on("click", function (e) {
+  //$(document).on("click", function (e) {
+  //  if(!$(e.target).is(".btn-group"))
+  //  {
+  //    if(toggle === true)
+  //    {
+  //      $("#toggle-on").attr("id", "");
+  //      toggle = false;
+  //    }
+  //  }
+  //});
+
+  document.addEventListener("click", function (e) {
     if(!$(e.target).is(".btn-group"))
     {
+      console.log("Test");
+
       if(toggle === true)
       {
         $("#toggle-on").attr("id", "");
