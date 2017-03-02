@@ -9,6 +9,7 @@ header {
 	position: fixed;
 	z-index: 100;
 	width: 100%;
+	border-bottom: 1px solid #aa957e;
 }
 
 header .row {
@@ -22,13 +23,13 @@ header nav {
 }
 
 #logo {
-	height: 100px;
+	height: 102px;
 }
 
 .nav-btn, .dropdown-btn {
 	color: black;
 	margin: 0;
-	padding: 10px 20px;
+	padding: 18px 20px;
 	font-size: 16px;
 	text-decoration: none;
 }
@@ -38,6 +39,10 @@ header nav {
 	color: black;
 }
 
+.btn-link, .dropdown-menu li a {
+	font-weight: 100;
+}
+
 .dropdown-btn:hover {
 	text-decoration: none;
 	color: black;
@@ -45,7 +50,7 @@ header nav {
 
 .btn-group.open {
 	background-color: black;
-	opacity: .9;
+	opacity: .85;
 }
 
 #toggle-on, #toggle-on:hover {
@@ -58,7 +63,8 @@ header nav {
 	border: 0;
 	margin-top: 0;
 	padding-top: 10px;
-	padding-bottom: 0;
+	padding-bottom: 10px;
+	box-shadow: none;
 }
 
 .dropdown-menu li a {
@@ -66,6 +72,12 @@ header nav {
 	font-size: 16px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	text-align: right;
+}
+
+.dropdown-menu li a:hover {
+	background-color: black;
+	color: #c4ad92;
 }
 
 .push-top {
