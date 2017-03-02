@@ -42,9 +42,25 @@ header nav {
 
 .btn-group.open {
 	background-color: black;
-	opacity: .8;
+	opacity: .9;
 }
 
 #toggle-on, #toggle-on:hover {
 	color: #c4ad92;
+}
+
+.dropdown-menu {
+	background-color: black;
+	border-radius: 0;
+	border: 0;
+	margin-top: 0;
+	padding-top: 10px;
+	padding-bottom: 0;
+}
+
+.dropdown-menu li a {
+	color: white;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
