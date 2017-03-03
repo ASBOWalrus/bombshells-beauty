@@ -2,8 +2,8 @@
 	background: url(../images/jumbotron-background.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	//transition: 0s ease;
-	//transition-property: background-position;
+	transition: 0s linear;
+	transition-property: background-position;
 	height: 75vh;
 	margin-top: 122px;
 	display: flex;
