@@ -62,6 +62,8 @@
 //});
 
 
-$(window).scroll(function () {
-  $(".jumbotron").css("background-position", "50% " + ($(this).scrollTop() / 2) + "px");
+$(document).ready(function () {
+  $(window).scroll(function () {
+    $(".jumbotron").css("background-position", "50% " + ($(this).scrollTop() / 2) + "px");
+  });
 });

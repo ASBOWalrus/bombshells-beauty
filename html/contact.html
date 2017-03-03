@@ -84,59 +84,59 @@
         </div>
       </div>
       <div id="map-container">
-      <div id="map"></div>
-      <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYXNib3dhbHJ1cyIsImEiOiJjaXpqeWg2YzkwMDN0MnhsOTJ0am5wNWVvIn0.XcTe3Cu3o7_UB246f-XFCQ';
-        var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/streets-v9',
-          center: [-0.11890570000002754, 53.2091857],
-          zoom: 16
-        });
-
-        map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-
-        map.on('load', function () {
-          map.addLayer({
-            "id": "points",
-            "type": "symbol",
-            "source": {
-              "type": "geojson",
-              "data": {
-                "type": "FeatureCollection",
-                "features": [{
-                  "type": "Feature",
-                  "geometry": {
-                    "type": "Point",
-                    "coordinates": [-0.11890570000002754, 53.2091857]
-                  },
-                  "properties": {
-                    "title": "Bombshells Beauty",
-                    "icon": "star"
-                  }
-                }]
-              }
-            },
-            "layout": {
-              "icon-image": "{icon}-15",
-              "text-field": "{title}",
-              "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-              "text-offset": [0, 0.6],
-              "text-anchor": "top"
-            }
+        <div id="map"></div>
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiYXNib3dhbHJ1cyIsImEiOiJjaXpqeWg2YzkwMDN0MnhsOTJ0am5wNWVvIn0.XcTe3Cu3o7_UB246f-XFCQ';
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            center: [-0.11890570000002754, 53.2091857],
+            zoom: 16
           });
-        });
 
-      </script>
-    </div>
+          map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+          map.on('load', function () {
+            map.addLayer({
+              "id": "points",
+              "type": "symbol",
+              "source": {
+                "type": "geojson",
+                "data": {
+                  "type": "FeatureCollection",
+                  "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                      "type": "Point",
+                      "coordinates": [-0.11890570000002754, 53.2091857]
+                    },
+                    "properties": {
+                      "title": "Bombshells Beauty",
+                      "icon": "star"
+                    }
+                  }]
+                }
+              },
+              "layout": {
+                "icon-image": "{icon}-15",
+                "text-field": "{title}",
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                "text-offset": [0, 0.6],
+                "text-anchor": "top"
+              }
+            });
+          });
+
+        </script>
+      </div>
     </main>
     <footer class="container-fluid">
       <div class="container">
         <div class="row">
-          <ul id="social-list">
-            <li class="col-xs-1">
+          <ul class="col-xs-12" id="social-list">
+            <li>
               <a target="_blank" href="https://www.facebook.com/bombshellshorncastle">
-                <img src="https://en.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png" alt="Facebook">
+                <img src="../images/facebook/FB-f-Logo__white_50.png" alt="Facebook">
               </a>
             </li>
           </ul> 
