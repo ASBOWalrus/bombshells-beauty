@@ -118,6 +118,11 @@ main p {
 	color: #5e5e5e;
 }
 
+main li {
+	font-size: 16px;
+	color: #5e5e5e;
+}
+
 hr {
 	margin-top: 50px;
 	margin-bottom: 50px;
