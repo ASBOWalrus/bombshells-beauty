@@ -30,9 +30,50 @@
 }
 
 .jumbotron h1 {
-	font-family: 'Old Standard TT', 'Gudea', serif;
+	font-family: 'Old Standard TT', serif;
+}
+
+.tel {
+	color: white;
+	padding: 0;
+	font-size: 22px;
+}
+
+.tel:hover, .tel:focus {
+	color: white;
+	text-decoration: none;
+}
+
+.contact {
+	margin-top: 30px;
+	padding: 12px 40px;
+	background-color: #c4ad92;
+	color: black;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+}
+
+.contact:hover, .contact:active, .contact:focus {
+	background-color: #d3ba9d;
+	color: black;
+	text-decoration: none;
+	border: none;
+	box-shadow: none;
 }
 
 main {
 	margin-top: 0;
+}
+
+#about h4 {
+	margin-top: 40px;
+	font-size: 23px;
+}
+
+#about p {
+	margin-top: 16px;
+	margin-bottom: 50px;
+	font-size: 16px;
 }

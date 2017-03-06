@@ -93,10 +93,22 @@ main {
 	margin-bottom: 150px;
 }
 
+main h1 {
+	margin-top: 50px;
+	margin-bottom: 0;
+	line-height: 32px;
+	color: #857462;
+	font-family: 'Old Standard TT', serif;
+	font-size: 45px;
+	text-align: center;
+}
+
 hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
 	width: 50px;
 	border-color: #e2e2e2;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 	border-style: solid;
 }
 
