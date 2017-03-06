@@ -109,6 +109,8 @@ main h1 {
 
 main h2 {
 	font-size: 23px;
+	margin-top: 0;
+	margin-bottom: 30px;
 }
 
 main p {
@@ -123,6 +125,14 @@ hr {
 	border-color: #e2e2e2;
 	border-bottom-width: 1px;
 	border-style: solid;
+}
+
+.type {
+	padding-bottom: 80px;
+}
+
+.top-row {
+	margin-bottom: 50px;
 }
 
 footer {

@@ -2,24 +2,7 @@
 	background-color: #f6f6f6;
 }
 
-main h2 {
-	margin-top: 0;
-	margin-bottom: 30px;
-}
-
 main li {
 	font-size: 16px;
 	color: #5e5e5e;
-}
-
-main p {
-	
-}
-
-.type {
-	padding-bottom: 80px;
-}
-
-.top-row {
-	margin-bottom: 50px;
 }
