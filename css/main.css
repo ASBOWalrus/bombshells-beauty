@@ -7,6 +7,11 @@ html {
 	min-height: 100%;
 }
 
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 header {
 	background-color: #c4ad92;
 	font-family: 'Gudea', sans-serif;
@@ -94,13 +99,21 @@ main {
 }
 
 main h1 {
-	margin-top: 50px;
-	margin-bottom: 0;
+	margin-top: 80px;
 	line-height: 32px;
-	color: #857462;
+	color: #7c6d5b;
 	font-family: 'Old Standard TT', serif;
 	font-size: 45px;
 	text-align: center;
+}
+
+main h2 {
+	font-size: 23px;
+}
+
+main p {
+	font-size: 16px;
+	color: #5e5e5e;
 }
 
 hr {

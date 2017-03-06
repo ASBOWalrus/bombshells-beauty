@@ -6,6 +6,7 @@
 	transition-property: background-position;
 	height: 75vh;
 	margin-top: 122px;
+	margin-bottom: 0;
 	display: flex;
 	position: relative;
 	align-items: center;
@@ -67,13 +68,11 @@ main {
 	margin-top: 0;
 }
 
-#about h4 {
+main h2 {
 	margin-top: 40px;
-	font-size: 23px;
 }
 
-#about p {
+main p {
 	margin-top: 16px;
 	margin-bottom: 50px;
-	font-size: 16px;
 }
