@@ -39,95 +39,61 @@
         </div>
       </div>
     </header>
-    <section class="push-top"></section>
-    <main class="container">
-      <div id="contact" class="row">
-        <h1>Contact Us</h1>
-        <div class="col-xs-12">
-          <div id="contact-form" class="col-xs-6">
-            <h2>Drop us a line!</h2>
-            <p>* = required</p>
-            <form action="mailto:woldsbeauty@gmail.com>subject=Bombshells%20Beauty%20Message" method="post" enctype="text/plain">
-              <div class="form-group">
-                <input type="email" id="contact-form-input-email" name="email" placeholder="Email*" required>
-              </div>
-              <div class="form-group">
-                <input type="text" id="contact-form-input-name" name="name" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <textarea id="contact-form-input-message" rows="6" name="message" placeholder="Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-default" id="contact-form-input-submit">Send</button>
-            </form>
-          </div>
-          <div id="contact-details" class="col-xs-6">
-            <h2>Better yet, see us in person!</h2>
-            <p>
-              We love our customers, so feel free to visit during normal business hours
-            </p>
-            <h2>Address</h2>
-            <p>
-              27 Bridge Street, Horncastle, Lincolnshire, LN9 5JB <br>
-              07983 131325
-            </p>
-            <h2>Hours</h2>
-            <p>
-              Monday - on request <br>
-              Tuesday - 10am - 4pm <br>
-              Wednesday - on request <br>
-              Thursday - 10am - 4pm <br>
-              Friday - 9am - 7pm <br>
-              Saturday - 9am - 2pm <br>
-              Sunday - Closed
-            </p>
+    <main class="container-fluid">
+      <div id="contact">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <hr>
+          <div class="col-xs-12">
+            <div id="contact-form" class="col-xs-6">
+              <h2>Drop us a line!</h2>
+              <p>* = required</p>
+              <form action="mailto:woldsbeauty@gmail.com>subject=Bombshells%20Beauty%20Message" method="post" enctype="text/plain">
+                <div class="form-group">
+                  <input type="email" id="contact-form-input-email" name="email" placeholder="Email*" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="contact-form-input-name" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <textarea id="contact-form-input-message" rows="6" name="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default" id="contact-form-input-submit">Send</button>
+              </form>
+            </div>
+            <div id="contact-details" class="col-xs-6">
+              <h2>Better yet, see us in person!</h2>
+              <p>
+                We love our customers, so feel free to visit during normal business hours
+              </p>
+              <h2>Address</h2>
+              <p>
+                27 Bridge Street, Horncastle, Lincolnshire, LN9 5JB <br>
+                07983 131325
+              </p>
+              <h2>Hours</h2>
+              <p>
+                Monday - On request <br>
+                Tuesday - 10am - 4pm <br>
+                Wednesday - On request <br>
+                Thursday - 10am - 4pm <br>
+                Friday - 9am - 7pm <br>
+                Saturday - 9am - 2pm <br>
+                Sunday - Closed
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <div id="map-container">
-        <div id="map"></div>
-        <script>
-          mapboxgl.accessToken = 'pk.eyJ1IjoiYXNib3dhbHJ1cyIsImEiOiJjaXpqeWg2YzkwMDN0MnhsOTJ0am5wNWVvIn0.XcTe3Cu3o7_UB246f-XFCQ';
-          var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            center: [-0.11890570000002754, 53.2091857],
-            zoom: 16
-          });
-
-          map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-
-          map.on('load', function () {
-            map.addLayer({
-              "id": "points",
-              "type": "symbol",
-              "source": {
-                "type": "geojson",
-                "data": {
-                  "type": "FeatureCollection",
-                  "features": [{
-                    "type": "Feature",
-                    "geometry": {
-                      "type": "Point",
-                      "coordinates": [-0.11890570000002754, 53.2091857]
-                    },
-                    "properties": {
-                      "title": "Bombshells Beauty",
-                      "icon": "star"
-                    }
-                  }]
-                }
-              },
-              "layout": {
-                "icon-image": "{icon}-15",
-                "text-field": "{title}",
-                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                "text-offset": [0, 0.6],
-                "text-anchor": "top"
-              }
-            });
-          });
-
-        </script>
+        <div class="container">
+          <div class="dir-btn">
+            <button class="btn">Get Directions</button>
+          </div>
+          <div id="map"></div>
+          <script src='../js/map.js'></script>
+          <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA2LUsBY1Y79s8sQkwr-flUC2xydreX6I8&callback=initMap' async defer></script>
+        </div>
       </div>
     </main>
     <footer class="container-fluid">
