@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,8 +6,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://getbootstrap.com/2.0.4/assets/js/bootstrap-dropdown.js'></script>
     <script src='../js/dropdown.js'></script>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
-    <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Gudea|Old+Standard+TT:400i" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='../css/main.css'>
@@ -31,7 +29,7 @@
               <ul class="dropdown-menu">
                 <li><a href="../html/price-list.html">Price List</a></li>
                 <li><a href="../html/beauty-at-your-own-home.html">Beauty at Your Own Home</a></li>
-                <li><a href="../html/contact.html">Contact</a></li>
+                <li><a href="../html/contact.php">Contact</a></li>
                 <li><a href="../html/photo-gallery.html">Photo Gallery</a></li>
               </ul>
             </div>            
@@ -46,20 +44,87 @@
           <hr>
           <div class="col-xs-12">
             <div id="contact-form" class="col-xs-6">
+              <?php
+								$nameErr = $emailErr = "";
+								$name = $email = $message = "";
+
+								if ($_SERVER["REQUEST_METHOD"] == "POST")
+								{
+									if (empty($_POST["name"]))
+									{
+										$nameErr = "* Name is required";
+									}
+									else
+									{
+										$name = test_input($_POST["name"]);
+										if (!preg_match("/^[a-zA-Z ]*$/",$name))
+										{
+											$nameErr = "* Only letters and white space allowed";
+											$name = "";
+										}
+									}
+  
+									if (empty($_POST["email"]))
+									{
+										$emailErr = "* Email is required";
+									}
+									else
+									{
+										$email = test_input($_POST["email"]);
+										if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+										{
+											$emailErr = "* Invalid email format";
+											$email = "";
+										}
+									}
+
+									if (empty($_POST["message"]))
+									{
+										$message = "";
+									}
+									else
+									{
+										$message = test_input($_POST["message"]);
+									}
+								}
+
+								function test_input($data) {
+									$data = trim($data);
+									$data = stripslashes($data);
+									$data = htmlspecialchars($data);
+									return $data;
+								}
+							?>
+
               <h2>Drop us a line!</h2>
               <p>* = required</p>
-              <form action="mailto:woldsbeauty@gmail.com>subject=Bombshells%20Beauty%20Message" method="post" enctype="text/plain">
+              <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <div class="form-group">
-                  <input type="email" id="contact-form-input-email" name="email" placeholder="Email*" required>
+                  <input type="text" id="contact-form-input-email" name="email" placeholder="Email*" value="<?php echo $email;?>">
+									<span class="error"><?php echo $emailErr;?></span>
                 </div>
                 <div class="form-group">
-                  <input type="text" id="contact-form-input-name" name="name" placeholder="Name">
+                  <input type="text" id="contact-form-input-name" name="name" placeholder="Name*" value="<?php echo $name;?>">
+									<span class="error"><?php echo $nameErr;?></span>
                 </div>
                 <div class="form-group">
-                  <textarea id="contact-form-input-message" rows="6" name="message" placeholder="Message"></textarea>
+                  <textarea id="contact-form-input-message" rows="12" name="message" placeholder="Message"><?php echo $message;?></textarea>
                 </div>
-                <button type="submit" class="btn btn-default" id="contact-form-input-submit">Send</button>
+                <input type="submit" class="btn btn-default" id="contact-form-input-submit" name="submit" value="Send">
               </form>
+
+              <?php
+								if($name != "" && $email != "")
+								{
+									echo "<h2>Your Input:</h2>";
+									echo $name;
+									echo "<br>";
+									echo $email;
+									echo "<br>";
+									echo $message;
+									echo "<br>";
+								}                
+              ?>
             </div>
             <div id="contact-details" class="col-xs-6">
               <h2>Better yet, see us in person!</h2>

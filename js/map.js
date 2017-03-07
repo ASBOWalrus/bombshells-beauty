@@ -14,5 +14,5 @@ function initMap() {
 }
 
 $(".dir-btn .btn").on("click", function() {
-  window.open('https://www.google.com/maps/dir//27+Bridge+St,+Horncastle,+LN9+5JB+UK', '_blank');
+  window.open('https://www.google.com/maps/dir//Bombshells+Beauty,+27+Bridge+St,+Horncastle,+LN9+5JB,+UK', '_blank');
 });

@@ -1,4 +1,18 @@
-﻿#map-container .container {
+﻿.form-group input, .form-group textarea, #contact-form-input-submit {
+	width: 100%;
+}
+
+.form-group input, .form-group textarea {
+	border: 1px solid #5e5e5e;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.form-group textarea {
+	resize: vertical;
+}
+
+#map-container .container {
 	position: relative;
 }
 
