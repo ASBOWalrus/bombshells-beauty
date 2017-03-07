@@ -6,3 +6,7 @@
 main p {
 	font-size: 18px;
 }
+
+main img {
+	margin-top: -25px;
+}
