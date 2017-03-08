@@ -46,22 +46,20 @@
             <div id="contact-form" class="col-xs-6">
               <?php
 								$nameErr = $emailErr = "";
-								$name = $email = $message = "";
+								$name = $email = $message = $msg_body = "";
+								$email_to = "joemarvin95@gmail.com";
+								$subject = "Message from Bombshells Beauty Contact Form";
+								$sent = "Send";
 
 								if ($_SERVER["REQUEST_METHOD"] == "POST")
 								{
-									if (empty($_POST["name"]))
+									if(empty($_POST["name"]))
 									{
-										$nameErr = "* Name is required";
+										$name = "";
 									}
 									else
 									{
 										$name = test_input($_POST["name"]);
-										if (!preg_match("/^[a-zA-Z ]*$/",$name))
-										{
-											$nameErr = "* Only letters and white space allowed";
-											$name = "";
-										}
 									}
   
 									if (empty($_POST["email"]))
@@ -75,6 +73,7 @@
 										{
 											$emailErr = "* Invalid email format";
 											$email = "";
+											$sent = "Send";
 										}
 									}
 
@@ -85,6 +84,15 @@
 									else
 									{
 										$message = test_input($_POST["message"]);
+									}
+
+									if(filter_var($email, FILTER_VALIDATE_EMAIL))
+									{
+										$sent = "Message sent";
+									}
+									else
+									{
+										$sent = "Send";
 									}
 								}
 
@@ -104,27 +112,35 @@
 									<span class="error"><?php echo $emailErr;?></span>
                 </div>
                 <div class="form-group">
-                  <input type="text" id="contact-form-input-name" name="name" placeholder="Name*" value="<?php echo $name;?>">
+                  <input type="text" id="contact-form-input-name" name="name" placeholder="Name" value="<?php echo $name;?>">
 									<span class="error"><?php echo $nameErr;?></span>
                 </div>
                 <div class="form-group">
-                  <textarea id="contact-form-input-message" rows="12" name="message" placeholder="Message"><?php echo $message;?></textarea>
+                  <textarea id="contact-form-input-message" rows="8" name="message" placeholder="Message"><?php echo $message;?></textarea>
                 </div>
-                <input type="submit" class="btn btn-default" id="contact-form-input-submit" name="submit" value="Send">
+                <input type="submit" class="btn btn-default" id="contact-form-input-submit" name="submit" value="<?php echo $sent;?>">
               </form>
 
               <?php
-								if($name != "" && $email != "")
+								if($email != "")
 								{
-									echo "<h2>Your Input:</h2>";
-									echo $name;
-									echo "<br>";
-									echo $email;
-									echo "<br>";
-									echo $message;
-									echo "<br>";
+									echo "<p class=\"sent\">Your message has been sent. Thank you for contacting us!</p>";
+
+									$msg_body = $message . "\n\n";
+									$msg_body .= "From:\n";
+									$msg_body .= $name;
+									$msg_body = wordwrap($msg_body, 70);
+									$msg_body = str_replace("\n.", "\n..", $msg_body);
+
+									mail($email_to, $subject, $msg_body, "From:" . $email);
 								}                
               ?>
+							<script>
+								if("<?php echo $sent;?>" == "Message sent")
+								{
+									$("#contact-form-input-submit").prop("disabled", "disabled")
+								}
+							</script>
             </div>
             <div id="contact-details" class="col-xs-6">
               <h2>Better yet, see us in person!</h2>

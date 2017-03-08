@@ -1,15 +1,51 @@
-﻿.form-group input, .form-group textarea, #contact-form-input-submit {
+﻿main h2 {
+	margin-bottom: 20px;
+}
+
+main p {
+	margin-bottom: 40px;
+}
+
+#contact {
+	margin-bottom: 80px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea, #contact-form-input-submit {
 	width: 100%;
 }
 
 .form-group input, .form-group textarea {
-	border: 1px solid #5e5e5e;
+	border: 1px solid #c4c4c4;
 	border-radius: 3px;
-	padding: 10px 20px;
+	padding: 20px 20px;
+	font-size: 16px;
 }
 
 .form-group textarea {
 	resize: vertical;
+}
+
+#contact-form-input-submit {
+	padding: 15px 40px;
+	background-color: #c4ad92;
+	font-size: 16px;
+	border: none;
+}
+
+#contact-form-input-submit:hover,
+#contact-form-input-submit:focus,
+#contact-form-input-submit:active {
+	background-color: #d3ba9d;
+	box-shadow: none;
+}
+
+.sent {
+	margin-top: 20px;
+	margin-bottom: 0;
 }
 
 #map-container .container {
