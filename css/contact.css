@@ -43,6 +43,10 @@ main p {
 	box-shadow: none;
 }
 
+#contact-form-input-submit[disabled]:hover {
+	background-color: #c4ad92;
+}
+
 .sent {
 	margin-top: 20px;
 	margin-bottom: 0;
