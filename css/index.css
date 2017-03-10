@@ -1,8 +1,27 @@
 ﻿.jumbotron {
+	-webkit-background: url(../images/jumbotron-background.jpg);
+	-moz-background: url(../images/jumbotron-background.jpg);
+	-o-background: url(../images/jumbotron-background.jpg);
 	background: url(../images/jumbotron-background.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-background-repeat: no-repeat;
+	-moz-background-repeat: no-repeat;
+	-o-background-repeat: no-repeat;
 	background-repeat: no-repeat;
+	-webkit-background-position: 50% 0;
+	-moz-background-position: 50% 0;
+	-o-background-position: 50% 0;
 	background-position: 50% 0;
+	-webkit-transition: 0s linear;
+	-moz-transition: 0s linear;
+	-o-transition: 0s linear;
 	transition: 0s linear;
+	-webkit-transition-property: background-position;
+	-moz-transition-property: background-position;
+	-o-transition-property: background-position;
 	transition-property: background-position;
 	height: 75vh;
 	margin-top: 122px;

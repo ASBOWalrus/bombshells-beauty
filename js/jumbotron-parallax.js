@@ -64,6 +64,9 @@
 
 $(document).ready(function () {
   $(window).scroll(function () {
+    $(".jumbotron").css("-webkit-background-position", "50% " + (($(this).scrollTop() / 2) * 0.4) + "px");
+    $(".jumbotron").css("-moz-background-position", "50% " + (($(this).scrollTop() / 2) * 0.4) + "px");
+    $(".jumbotron").css("-o-background-position", "50% " + (($(this).scrollTop() / 2) * 0.4) + "px");
     $(".jumbotron").css("background-position", "50% " + (($(this).scrollTop() / 2) * 0.4) + "px");
   });
 });

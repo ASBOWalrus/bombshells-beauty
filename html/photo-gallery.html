@@ -37,23 +37,16 @@
         </div>
       </div>
     </header>
-    <section class="push-top"></section>
-    <main class="container">
-      <div id="photo-gallery" class="row">
+    <main class="container-fluid">
+      <div id="photo-gallery">
         <h1>Photo Gallery</h1>
+        <hr>
         <div class="col-xs-12">
-          <div class="gallery">            
-            <div class="col-xs-4 gallery-images fade">
-              <img id="img-1" src="../images/gallery/gallery-pic-1.jpg">
-            </div>
-            <div class="col-xs-4 gallery-images fade">
-              <img id="img-2" src="../images/gallery/gallery-pic-2.jpg">
-            </div>
-            <div class="col-xs-4 gallery-images fade">
-              <img id="img-3" src="../images/gallery/gallery-pic-3.jpg">
-            </div>   
+          <div class="container gallery">            
+            <div class="gallery-images"></div>
             <button class="btn scroll" id="scroll-right">&#10095</button>
             <button class="btn scroll" id="scroll-left">&#10094</button>
+            <div class="selector"></div>
           </div>
           <script src='../js/photo-gallery.js'></script>
         </div>
