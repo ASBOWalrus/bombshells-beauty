@@ -36,6 +36,7 @@ header nav {
 
 #logo {
 	height: 102px;
+	border: 5px ridge #ae8067;
 }
 
 .nav-btn, .dropdown-btn {
@@ -90,6 +91,21 @@ header nav {
 .dropdown-menu li a:hover {
 	background-color: black;
 	color: #c4ad92;
+}
+
+.arrow {
+	-webkit-transition: transform 0.3s ease-in-out;
+	-moz-transition: transform 0.3s ease-in-out;
+	-o-transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+	fill: #c4ad92;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 main {
