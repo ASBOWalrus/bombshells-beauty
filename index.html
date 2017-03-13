@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <title>Bombshells Beauty</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='https://getbootstrap.com/2.0.4/assets/js/bootstrap-dropdown.js'></script>
+    
     <script src='js/dropdown.js'></script>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Gudea|Old+Standard+TT:400i" rel="stylesheet">
@@ -12,37 +14,87 @@
     <link rel='stylesheet' type='text/css' href='css/index.css'>
   </head>
   <body>
-    <header class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-4">
-            <a href="index.html"><img id="logo" src="images/logo.jpg" alt="Bombshells Beauty Logo"></a>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img id="logo" src="images/logo.jpg" alt="Bombshells Beauty Logo"></a>
           </div>
-          <nav class="col-xs-8">
-            <a class="btn btn-link nav-btn" href="index.html">Home</a>
-            <a class="btn btn-link nav-btn" href="html/beauty.html">Beauty</a>
-            <a class="btn btn-link nav-btn" href="html/skin-body-care.html">Skin & Body Care</a>
-            <a class="btn btn-link nav-btn" href="html/holistic.html">Holistic</a>
-            <a class="btn btn-link nav-btn" href="html/wedding-pamper.html">Wedding & Pamper</a>
-            <div class="btn-group">
-              <a class="btn btn-link dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More 
-                <svg class="arrow" viewBox = "0 0 64 64" width="12" height="12">
-                  <svg>
-                    <polygon points="0 18 4 14 32 42 60 14 64 18 32 50"></polygon>
+          <div class="collapse navbar-collapse" id="my-navbar">
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+              <li>
+                <a class="nav-btn" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-btn" href="html/beauty.html">Beauty</a>
+              </li>
+              <li>
+                <a class="nav-btn" href="html/skin-body-care.html">Skin & Body Care</a>
+              </li>
+              <li>
+                <a class="nav-btn" href="html/holistic.html">Holistic</a>
+              </li>
+              <li>
+                <a class="nav-btn" href="html/wedding-pamper.html">Wedding & Pamper</a>
+              </li>
+              <li class="btn-group">
+                <a class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More 
+                  <svg class="arrow" viewBox = "0 0 64 64" width="12" height="12">
+                    <svg>
+                      <polygon points="0 18 4 14 32 42 60 14 64 18 32 50"></polygon>
+                    </svg>
                   </svg>
-                </svg>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="html/price-list.html">Price List</a></li>
-                <li><a href="html/beauty-at-your-own-home.html">Beauty at Your Own Home</a></li>
-                <li><a href="html/contact.php">Contact</a></li>
-                <li><a href="html/photo-gallery.html">Photo Gallery</a></li>
-              </ul>
-            </div>            
-          </nav>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="html/price-list.html">Price List</a></li>
+                  <li><a href="html/beauty-at-your-own-home.html">Beauty at Your Own Home</a></li>
+                  <li><a href="html/contact.php">Contact</a></li>
+                  <li><a href="html/photo-gallery.html">Photo Gallery</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="col-xs-12 nav navbar-nav visible-xs visible-sm">
+              <li>
+                <a class="col-xs-4 nav-btn" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/beauty.html">Beauty</a>
+              </li>
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/skin-body-care.html">Skin & Body Care</a>
+              </li>             
+            </ul>
+            <ul class="col-xs-12 nav navbar-nav visible-xs visible-sm">
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/holistic.html">Holistic</a>
+              </li>
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/wedding-pamper.html">Wedding & Pamper</a>
+              </li> 
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/price-list.html">Price List</a>
+              </li>
+            </ul>
+            <ul class="col-xs-12 nav navbar-nav visible-xs visible-sm">
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/beauty-at-your-own-home.html">Beauty at Your Own Home</a>
+              </li>
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/contact.php">Contact</a>
+              </li>
+              <li>
+                <a class="col-xs-4 nav-btn" href="html/photo-gallery.html">Photo Gallery</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </header>
+      </div>            
+    </nav>
     <section class="jumbotron">
       <div class="container">
         <div class="row">
@@ -69,14 +121,14 @@
         </div>
         <div>
           <div class="col-xs-6 text-center" id="about-excitement">
-            <img class="img" src="images/about-excitement.jpg" alt="Picture of example beauty treatments available">
+            <img class="img-responsive" src="images/about-excitement.jpg" alt="Picture of example beauty treatments available">
             <h2>Generate Excitement</h2>
             <p>
               What's something exciting your business offers? Say it here.
             </p>
           </div>
           <div class="col-xs-6 text-center" id="about-close-deal">
-            <img class="img" src="images/about-close-deal.jpg" alt="Picture of example beauty treatments available">
+            <img class="img-responsive" src="images/about-close-deal.jpg" alt="Picture of example beauty treatments available">
             <h2>Close the deal</h2>
             <p>
               Give customers a reason to do business with you.

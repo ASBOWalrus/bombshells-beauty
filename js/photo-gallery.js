@@ -52,7 +52,7 @@ $(document).ready(function() {
   for(var k = 0; k < images.length; k++)
   {
     $(".selector").append('<span class="selector-icon icon-' + k + '"></span>');
-    $(".gallery-images").append('<img class="gallery-img img-' + k + '" src="' + images[k] + '">');
+    $(".gallery-images").append('<img class="img-responsive gallery-img img-' + k + '" src="' + images[k] + '">');
   }
 
   selectArr = $(".selector-icon");

@@ -1,4 +1,50 @@
-﻿* {
+﻿@media (max-width: 991px) {
+	.navbar-header {
+		float: none;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+
+	.navbar-nav {
+		float: none !important;
+		margin: 7.5px -15px;
+	}
+
+	.navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+
+    .navbar-collapse.collapse.in { 
+        display: block !important;
+    }
+
+    .collapsing {
+        overflow: hidden !important;
+    }
+}
+
+* {
 	font-family: 'Gudea', sans-serif;
 }
 
@@ -12,26 +58,25 @@ html {
 	padding-right: 0;
 }
 
-header {
+.navbar {
 	background-color: #c4ad92;
 	font-family: 'Gudea', sans-serif;
-	padding: 10px 0;
-	position: fixed;
-	top: 0;
+	margin: 0;
 	z-index: 100;
-	width: 100%;
 	border-bottom: 1px solid #aa957e;
 }
 
-header .row,
 footer .row {
 	display: flex;
 	align-items: center;
 }
 
-header nav {
-	display: flex;
-	justify-content: flex-end;
+.icon-bar {
+	background-color: black;
+}
+
+.navbar-toggle {
+	padding: 46px 0;
 }
 
 #logo {
@@ -39,35 +84,53 @@ header nav {
 	border: 5px ridge #ae8067;
 }
 
+.navbar-brand {
+	padding: 0;
+	margin: 10px;
+}
+
+#my-navbar .hidden-xs {
+	padding: 36px 0;
+}
+
+#my-navbar .hidden-xs li a {
+	padding: 15px 20px;
+}
+
 .nav-btn, .dropdown-btn {
 	color: black;
-	margin: 0;
-	padding: 18px 20px;
 	font-size: 16px;
 	text-decoration: none;
 }
 
 .nav-btn:hover, .nav-btn:focus {
 	text-decoration: none;
-	color: black;
+	color: initial !important;
+	background-color: initial !important;
 }
 
-.btn-link, .dropdown-menu li a {
+.dropdown-menu li a {
 	font-weight: 100;
 }
 
-.dropdown-btn:hover {
-	text-decoration: none;
-	color: black;
+.dropdown-btn {
+	cursor: pointer;
 }
 
-.btn-group.open {
+.dropdown-btn:hover, .dropdown-btn:focus, .dropdown-btn:active {
+	text-decoration: none;
+	color: initial;
+	background-color: initial !important;
+}
+
+.btn-group.open, .btn-group.open:focus, .btn-group.open:active {
 	background-color: black;
 	opacity: .85;
 }
 
 #toggle-on, #toggle-on:hover {
 	color: #c4ad92;
+	background-color: initial;
 }
 
 .dropdown-menu {
@@ -88,8 +151,8 @@ header nav {
 	text-align: right;
 }
 
-.dropdown-menu li a:hover {
-	background-color: black;
+.dropdown-menu li a:hover, .dropdown-menu li a:focus {
+	background-color: initial;
 	color: #c4ad92;
 }
 

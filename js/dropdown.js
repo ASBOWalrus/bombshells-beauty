@@ -1,29 +1,35 @@
 $(document).ready(function () {
   var toggle = false;
 
-  $(".dropdown-btn").on("click", function () {
-    $(this).children(".arrow").toggleClass("rotate");
+  $(".dropdown-btn").on("click", function (e) {
+    if(e.which === 1)
+    {
+      $(this).children(".arrow").toggleClass("rotate");
 
-    if (toggle === false)
-    {
-      $(this).attr("id", "toggle-on");
-      toggle = true;
-    }
-    else
-    {
-      $(this).attr("id", "");
-      toggle = false;
+      if (toggle === false)
+      {
+        $(this).attr("id", "toggle-on");
+        toggle = true;
+      }
+      else
+      {
+        $(this).attr("id", "");
+        toggle = false;
+      }
     }
   });
 
   document.addEventListener("click", function (e) {
-    if(!$(e.target).is(".btn-group"))
+    if(e.which === 1)
     {
-      if(toggle === true)
+      if(!$(e.target).is(".btn-group"))
       {
-        $("#toggle-on").attr("id", "");
-        $(".arrow").removeClass("rotate");
-        toggle = false;
+        if(toggle === true)
+        {
+          $("#toggle-on").attr("id", "");
+          $(".arrow").removeClass("rotate");
+          toggle = false;
+        }
       }
     }
   });

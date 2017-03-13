@@ -21,6 +21,7 @@
 	position: absolute;
 	padding: 10px;
 	top: 50%;
+	transform: translateY(-50%);
 	background-color: #c4ad92;
 	color: black;
 	border: none;
